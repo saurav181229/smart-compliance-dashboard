@@ -12,7 +12,7 @@ using ingestion_service.data;
 namespace ingestion_service.Migrations
 {
     [DbContext(typeof(EventDbContext))]
-    [Migration("20251123203559_InitialCreate")]
+    [Migration("20251123222635_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

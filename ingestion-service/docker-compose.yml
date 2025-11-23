@@ -6,7 +6,7 @@ services:
     container_name: Events
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD={SQL_PASSWORD}
+      - SA_PASSWORD=YourStrong!Passw0rd
     ports:
       - "1433:1433"
     volumes:
