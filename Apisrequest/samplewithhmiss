@@ -1,0 +1,11 @@
+{
+  "userId": 0,
+  "eventType": "Login",
+  "amount": null,
+  "currency": null,
+  "location": "",
+  "status": "SUCCESS",
+  "deviceId": "",
+  "ipAddress": "192.168.1.11",
+  "timestamp": "2025-01-15T11:05:00Z"
+}

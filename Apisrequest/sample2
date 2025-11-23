@@ -1,0 +1,11 @@
+{
+  "userId": 55,
+  "eventType": "Transaction",
+  "amount": 150.75,
+  "currency": "EUR",
+  "location": "IE",
+  "status": "SUCCESS",
+  "deviceId": "dev-222",
+  "ipAddress": "192.168.1.55",
+  "timestamp": "2025-01-15T11:00:00Z"
+}

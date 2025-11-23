@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: Events
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD={SQL_PASSWORD}
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - appnetwork
+
+volumes:
+  sql_data:
+
+networks:
+  appnetwork:
+    driver: bridge

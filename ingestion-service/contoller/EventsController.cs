@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using ingestion_service.mappers;
+using ingestion_service.models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
+namespace ingestion_service.contoller
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class EventsController : ControllerBase
+    {
+        private readonly ILogger<EventsController> _logger;
+
+        public EventsController(ILogger<EventsController> logger)
+        {
+            _logger = logger;
+        }
+
+       
+
+
+        [HttpPost("events")]
+        public IActionResult ReceiveEvents([FromBody] EventDto eventsDto )
+        {
+            
+        //    if (!ModelState.IsValid)                 // kind of a contrainer which stores validation result 
+        //       return BadRequest(ModelState);
+
+        //1.validation done
+
+        //2.map entity
+
+        var entity = EventMapper.ToEntity(eventsDto);
+
+        return Ok("Accepted");
+        }
+    }
+}
